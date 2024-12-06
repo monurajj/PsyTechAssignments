@@ -22,7 +22,7 @@ PsytechStocks is a full-stack web application designed to provide retail investo
   - A CTA: "Get Your Stock Insights with Our AI Chat Support."
 
 ### 2. Stock Analysis
-- **Search and Select**: Users can search for stocks by their symbol (e.g., AAPL, TSLA).
+- **Select**: Users can search for stocks by their symbol (e.g., AAPL, TSLA).
 - **Stock Details**: Displays financial metrics such as:
   - P/E ratio
   - EPS
@@ -93,6 +93,7 @@ src/ ├── AiStockAnalyser/ │ └── AiStockPredictor
 ## Installation and Setup
 
 ### Prerequisites
+- React JS
 - Node.js
 - MongoDB
 - Git
@@ -116,6 +117,43 @@ Copy code
   "bookmarks": [],
   "__v": 0
 }
+
+
+My Approach to the problem:
+
+Step 1: Understanding the Problem
+I started by carefully reading the case study to understand the requirements. I broke it into smaller tasks and made a rough plan in my notebook, listing out the tech stack and features I’d need. The main focus areas were:
+Creating a clean and responsive user interface.
+Setting up a backend for user authentication and data handling.
+Integrating stock and AI APIs for data insights.
+Adding a bookmarking feature for users to save their stock pitches.
+
+Step 2: Development
+Homepage: I began by building a simple homepage using React and Tailwind CSS to act as the main entry point.
+Authentication: I implemented login and signup functionality on the backend with MongoDB to store user information securely.
+Stock Data and AI: I connected stock APIs to fetch data like financial metrics and stock performance. For AI analysis, I used the Gemini API to provide stock insights.
+Bookmarking: I built an API to save user bookmarks, but there are still some issues to resolve with the functionality.
+Deployment: After completing the basic structure, I deployed the frontend and backend on Vercel for live access.
+
+Challenges and Solutions
+
+1. Backend Deployment Issues
+Problem: I faced several issues while deploying the backend and database, especially with CORS errors.
+Solution: After researching and testing, I fixed the CORS configuration in the backend and ensured that the frontend and backend communicated smoothly.
+
+2. Stock API Data Limitations
+Problem: Some key data points (like P/E ratio and EPS) were unavailable in the API.
+Solution: I used placeholder (hardcoded) data temporarily to keep the application functional while looking for a better API solution.
+
+3. Bookmarking Issues
+Problem: While the API for bookmarks is functional, I faced issues integrating it with the frontend.
+Solution: I’m still working on debugging and testing this feature to ensure smooth functionality.
+
+4. Time Spent on Debugging
+Problem: Debugging deployment and authentication consumed a lot of time.
+Solution: I referred to official documentation and sought help from friends to resolve issues faster.
+
+
 
 Future Enhancements
 Fully integrate real-time data from the stock API.
