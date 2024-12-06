@@ -18,7 +18,8 @@ PsytechStocks is a full-stack web application designed to provide retail investo
 ### 1. Home Page
 *Purpose**: Introduces the company and its services.
 *Options**: 
-  - Navigate to different sections such as **Stock Analysis**, **About**, **Chat Support**, **Sign In**, and **Sign Up**.
+  - Navigate to different sections such as **Stock Analysis**,**Try Financial Modeling
+**,  **About**, **Chat Support**, **Sign In**, and **Sign Up**.
   - A CTA: "Get Your Stock Insights with Our AI Chat Support."
 
 ### 2. Stock Analysis
@@ -34,21 +35,26 @@ PsytechStocks is a full-stack web application designed to provide retail investo
   - Key risks derived from market data or sentiment analysis.
 - **Bookmark Pitches**: Allows logged-in users to save generated pitches for later.
 
-### 3. AI Stock Predictor
+### 3. Try Financial Modeling
+- **Users can calculate EBITDA, Profit Margin, Cash Flow and Cash Flow Projection:
+  - User have to provide some data related to Revenue, COGS, OPEX, Taxes.
+  - As a result they will get their EBITDA, Profit Margin, Cash Flow and Cash Flow Projection details .
+
+### 4. AI Stock Predictor
 - **AI Chat Support**: Powered by the Gemini API, this feature:
   - Answers user queries about stock performance.
   - Provides AI-powered predictions and sentiment analysis.
 
-### 4. Authentication
+### 5. Authentication
 - **Sign Up and Sign In**: Users can create an account or log in to:
   - Save stock pitches.
   - Access personalized features.
 - **Bookmark Management**: Saved pitches can be retrieved later.
 
-### 5. Chat Support
+### 6. Chat Support
 - Offers real-time AI chat for stock-related help and suggestions.
 
-### 6. Footer
+### 7. Footer
 - Includes navigation links and contact details.
 
 
@@ -81,6 +87,12 @@ src/ ├── AiStockAnalyser/ │ └── AiStockPredictor
             │ └── StockDetails 
             ├── toast/ 
             │ └── pitchData
+    ├── FinanceModeling/ 
+            │--- CalculationDisplay │ 
+            ├── InputSection │ 
+            ├── Mianpage │ 
+            ├── Slider  
+            ├── VisiualizationSection
 
 ### Backend
     AllApis/ 
@@ -119,20 +131,29 @@ Copy code
 }
 
 
+
 My Approach to the problem:
 
 Step 1: Understanding the Problem
 I started by carefully reading the case study to understand the requirements. I broke it into smaller tasks and made a rough plan in my notebook, listing out the tech stack and features I’d need. The main focus areas were:
+
 Creating a clean and responsive user interface.
+
 Setting up a backend for user authentication and data handling.
+
 Integrating stock and AI APIs for data insights.
+
 Adding a bookmarking feature for users to save their stock pitches.
 
 Step 2: Development
 Homepage: I began by building a simple homepage using React and Tailwind CSS to act as the main entry point.
+
 Authentication: I implemented login and signup functionality on the backend with MongoDB to store user information securely.
+
 Stock Data and AI: I connected stock APIs to fetch data like financial metrics and stock performance. For AI analysis, I used the Gemini API to provide stock insights.
+
 Bookmarking: I built an API to save user bookmarks, but there are still some issues to resolve with the functionality.
+
 Deployment: After completing the basic structure, I deployed the frontend and backend on Vercel for live access.
 
 Challenges and Solutions
@@ -153,6 +174,9 @@ Solution: I’m still working on debugging and testing this feature to ensure sm
 Problem: Debugging deployment and authentication consumed a lot of time.
 Solution: I referred to official documentation and sought help from friends to resolve issues faster.
 
+5. Not enough previous knowledge
+Problem : I don't have mush previous knowledge about Revenue, COGS, OPEX, Taxes, EBITDA and cashflow
+Solution : I read about them from youtube , chatgpt, and Google
 
 
 Future Enhancements

@@ -5,6 +5,7 @@ import sampleImage2 from "../assets/psyteckImage02.png";
 import sampleImage3 from "../assets/psyteckImage03.png";
 import AboutUs from "./aboutUs";
 // import PsytechChatbot from "../ChatSupport/chatsupport";
+// import MainPage from "../FinanceModeling/mainPage";
 
 function HomePage() {
   return (
@@ -38,6 +39,8 @@ function HomePage() {
 
       <AboutUs/>
       {/* <PsytechChatbot/> */}
+
+      {/* <MainPage/> */}
     </div>
   );
 }

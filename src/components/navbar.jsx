@@ -67,6 +67,11 @@ function NavBar() {
             </Link>
           </li>
           <li>
+            <Link to="/yourfinancialmodeling" className="hover:underline">
+              Try Financial Modeling
+            </Link>
+          </li>
+          <li>
             <Link to="/about" className="hover:underline">
               About
             </Link>
@@ -136,6 +141,11 @@ function NavBar() {
                 Stock Analysis
               </Link>
             </li>
+            <li>
+            <Link to="/yourfinancialmodeling" className="hover:underline">
+              Try Financial Modeling
+            </Link>
+          </li>
             <li>
               <Link to="/ChatSupport" className="hover:underline">
                 ChatSupport

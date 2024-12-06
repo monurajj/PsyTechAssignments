@@ -9,6 +9,7 @@ import AboutUs from './components/aboutUs';
 import PsytechChatbot from './ChatSupport/chatsupport';
 import Footer from './components/footer';
 import AIStockPredictor from './AiStockAnalyser/AiStockPredictor';
+import MainPage from './FinanceModeling/mainPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/psytechAiStockPredictor" element={<AIStockPredictor/>} />
+        <Route path="/yourfinancialmodeling" element={<MainPage/>} />
       </Routes>
       <Footer/>
     </Router>
