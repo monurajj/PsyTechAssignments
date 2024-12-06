@@ -1,4 +1,4 @@
-// src/components/Slider.js
+
 import React from "react";
 
 const Slider = ({ label, value, onChange }) => {

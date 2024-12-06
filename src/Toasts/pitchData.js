@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 // import './';
-
 const Toast = ({ message, isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {

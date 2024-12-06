@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'; // Import Link component for navigation
+import { Link } from 'react-router-dom';
 
 function AboutUs() {
   return (

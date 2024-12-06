@@ -1,4 +1,3 @@
-// src/components/CalculationDisplay.js
 import React from "react";
 
 const CalculationDisplay = ({ metrics }) => {

@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Icons for contact details
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          
           {/* Contact Information Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
