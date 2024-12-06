@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# PsytechStocks
+Name : Monu Kumar
+Email : monu.k23csaimo@nst.rishihood.edu.in
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Links :
 
-In the project directory, you can run:
+*Live Frontend: [PsytechStocks Frontend](https://psy-tech-assignments.vercel.app/)
+*Frontend Repository: [GitHub](https://github.com/monurajj/PsyTechAssignments)
+*Live Backend: [PsytechStocks Backend](https://psytech-backend-server.vercel.app/)
+*Backend Repository: [GitHub](https://github.com/monurajj/PsyTechBackend)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+PsytechStocks is a full-stack web application designed to provide retail investors with tools to analyze stocks, generate stock pitches, and interact with AI for stock-related insights. The application also features user authentication for saving/bookmarking stock pitches for future reference.
 
-### `npm test`
+## Features
+### 1. Home Page
+*Purpose**: Introduces the company and its services.
+*Options**: 
+  - Navigate to different sections such as **Stock Analysis**, **About**, **Chat Support**, **Sign In**, and **Sign Up**.
+  - A CTA: "Get Your Stock Insights with Our AI Chat Support."
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Stock Analysis
+- **Search and Select**: Users can search for stocks by their symbol (e.g., AAPL, TSLA).
+- **Stock Details**: Displays financial metrics such as:
+  - P/E ratio
+  - EPS
+  - Market Cap
+  - Dividend Yield
+- **Historical Performance**: Graphical representation of stock performance over the past year using Chart.js.
+- **Stock Pitch Generation**: Generates a concise stock pitch based on:
+  - Financial health and growth potential.
+  - Key risks derived from market data or sentiment analysis.
+- **Bookmark Pitches**: Allows logged-in users to save generated pitches for later.
 
-### `npm run build`
+### 3. AI Stock Predictor
+- **AI Chat Support**: Powered by the Gemini API, this feature:
+  - Answers user queries about stock performance.
+  - Provides AI-powered predictions and sentiment analysis.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Authentication
+- **Sign Up and Sign In**: Users can create an account or log in to:
+  - Save stock pitches.
+  - Access personalized features.
+- **Bookmark Management**: Saved pitches can be retrieved later.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Chat Support
+- Offers real-time AI chat for stock-related help and suggestions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 6. Footer
+- Includes navigation links and contact details.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
+### Frontend
+- **Framework**: React
+- **Styling**: Tailwind CSS
+- **Graph Visualization**: Chart.js
+- **Hosting**: Vercel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend
+- **Runtime**: Node.js
+- **Database**: MongoDB
+- **Hosting**: Vercel
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
+### Frontend
+src/ ├── AiStockAnalyser/ │ └── AiStockPredictor 
+    ├── assets/ 
+    ├── Authentication/ 
+                │ ├── login │ 
+                └── signup 
+    ├── chatsupport/ 
+    ├── components/ 
+            │ ├── aboutpage │ 
+            ├── footer │ 
+            ├── homepage │ 
+            ├── navbar 
+            │ └── StockDetails 
+            ├── toast/ 
+            │ └── pitchData
 
-## Learn More
+### Backend
+    AllApis/ 
+        ├── Allroutes/ 
+        ├── Middleware/ 
+    ├── Schemas/ 
+        │ └── schema.js 
+    index.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation and Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+- Node.js
+- MongoDB
+- Git
 
-### Code Splitting
+### Steps to Run Locally
+1. Clone the repositories:
+   ```bash
+   git clone https://github.com/monurajj/PsyTechAssignments.git
+   git clone https://github.com/monurajj/PsyTechBackend.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+API Details
+Gemini API: Used for AI chat support and stock insights.
+MongoDB Schema:
+json
+Copy code
+{
+  "_id": "6752c2f78d581f7b2cf9e44e",
+  "email": "test@example11.com",
+  "password": "$2a$10$vDyjXIdf9AgJew1ZNZX3bugYDoAFX64ls5nnxqf.FwjEunmxE7R2C",
+  "bookmarks": [],
+  "__v": 0
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Future Enhancements
+Fully integrate real-time data from the stock API.
+Fix AI prediction errors.
+Complete the bookmarking functionality.
+Add additional charts and insights for more comprehensive stock analysis.

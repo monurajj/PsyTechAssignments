@@ -54,6 +54,7 @@ const AIStockPredictor = () => {
     setIsLoading(true);
     setError('');
     setPredictionResult(null);
+    
 
     try {
       const predictionEndpoint = process.env.REACT_APP_STOCK_PREDICTION_API || 'https://chat-bot-chi-rose.vercel.app/prompt';
