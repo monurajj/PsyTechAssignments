@@ -7,17 +7,24 @@ function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const profileMenuRef = useRef(null);
-  const [user, setUser] = useState(null);
+  const [userEmail, setUserEmail] = useState(null);
 
   useEffect(() => {
-    const username = localStorage.getItem("username");
-    setUser(username || null);
+    const email = localStorage.getItem("email");
+    const token = localStorage.getItem("token");
+
+    if (email && token) {
+      const firstWord = email.split("@")[0];
+      setUserEmail(firstWord);
+    } else {
+      setUserEmail(null);
+    }
   }, []);
 
   const handleSignOut = () => {
-    localStorage.removeItem("username");
+    localStorage.removeItem("email");
     localStorage.removeItem("token");
-    setUser(null);
+    setUserEmail(null);
     setIsProfileMenuOpen(false);
     setIsMobileMenuOpen(false);
   };
@@ -33,6 +40,7 @@ function NavBar() {
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-red-600 to-blue-500 shadow-lg">
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
+        {/* Logo */}
         <div className="flex items-center cursor-pointer">
           <Link to="/" className="flex items-center">
             <img
@@ -46,6 +54,7 @@ function NavBar() {
           </Link>
         </div>
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-white">
           <li>
             <Link to="/" className="hover:underline">
@@ -63,18 +72,18 @@ function NavBar() {
             </Link>
           </li>
           <li>
-          <Link to="/ChatSupport" className="hover:underline">
-                ChatSupport
-              </Link>
+            <Link to="/ChatSupport" className="hover:underline">
+              ChatSupport
+            </Link>
           </li>
-          {user ? (
+          {userEmail ? (
             <div className="relative">
               <button
                 onClick={toggleProfileMenu}
                 className="flex items-center space-x-2"
               >
                 <FaUser />
-                <span>{user}</span>
+                <span>{userEmail}</span>
                 <FaCaretDown />
               </button>
               {isProfileMenuOpen && (
@@ -106,10 +115,14 @@ function NavBar() {
             </>
           )}
         </ul>
+
+        {/* Mobile Menu Toggle */}
         <button onClick={toggleMobileMenu} className="md:hidden text-white">
           {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
+
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-gradient-to-r from-blue-600 to-green-500 text-white">
           <ul className="flex flex-col space-y-4 p-4">
@@ -133,7 +146,7 @@ function NavBar() {
                 About
               </Link>
             </li>
-            {user ? (
+            {userEmail ? (
               <button
                 onClick={handleSignOut}
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 text-black bg-white rounded"
