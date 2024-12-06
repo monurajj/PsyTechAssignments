@@ -16,7 +16,7 @@ import { PulseLoader } from "react-spinners";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Toast from "../Toasts/pitchData";
 
-// Register Chart.js components
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -46,10 +46,10 @@ const StockChart = () => {
   const message = "Currently, the pitch data is hardcoded due to unavailability of data in the API.";
 
   const handleCloseToast = () => {
-    setIsToastOpen(false); // Close the toast when the timeout completes or manually
+    setIsToastOpen(false);
   };
 
-  // Define the stock APIs array
+  //stock APIs array
   const stockApis = {
     "RELIANCE.BSE": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=RELIANCE.BSE&outputsize=full&apikey=demo",
     "IBM": "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=full&apikey=demo",
@@ -58,7 +58,6 @@ const StockChart = () => {
   };
 
   useEffect(() => {
-    // Check login status when component mounts
     const token = localStorage.getItem("token");
     setIsLoggedIn(!!token);
 
@@ -94,7 +93,7 @@ const StockChart = () => {
           closeData.push(parseFloat(values["4. close"]));
         });
 
-        // Check if stock is already bookmarked
+        // Checking if stock is already bookmarked
         const token = localStorage.getItem("token");
         if (token) {
           try {
