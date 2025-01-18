@@ -121,7 +121,6 @@ API Details
 Gemini API: Used for AI chat support and stock insights.
 MongoDB Schema:
 json
-Copy code
 {
   "_id": "6752c2f78d581f7b2cf9e44e",
   "email": "test@example11.com",
