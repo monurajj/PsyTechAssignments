@@ -58,6 +58,9 @@ PsytechStocks is a full-stack web application designed to provide retail investo
 - Includes navigation links and contact details.
 
 
+
+
+
 My Approach to the problem:
 
 Step 1: Understanding the Problem
